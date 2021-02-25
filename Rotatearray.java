@@ -1,0 +1,27 @@
+package assignment;
+public class Rotatearray
+{
+	public static void rotate(int[] arr, int d)
+	{
+		for(int i = 0; i < d - 1; i++)
+		{
+			int temp = arr[0];
+			int j = 0;
+			for(j = 0; j < arr.length - 1; j++)
+			{
+				arr[j] = arr[j + 1];
+			}
+			arr[j] = temp;
+		}
+    }
+	public static void main(String[] args)
+	{
+		int arr[] = {1,2,3,4,5,6,7,8,9};
+		int d = 6;
+		rotate(arr, d);
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print(arr[i]);
+		}
+	}
+}
